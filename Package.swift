@@ -20,7 +20,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "ASN1",
-            dependencies: ["BigInt"]),
+            dependencies: ["BigIntRenamed"]),
         .testTarget(
             name: "ASN1Tests",
             dependencies: ["ASN1"]),

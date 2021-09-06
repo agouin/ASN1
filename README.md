@@ -36,7 +36,7 @@ It supports the following ASN1 types:
 In your project Package.swift file add a dependency like<br/>
 
 	  dependencies: [
-	  .package(url: "https://github.com/leif-ibsen/ASN1", from: "1.2.1"),
+	  .package(url: "https://github.com/agouin/ASN1", .branch("swift_5_1")),
 	  ]
 
 <h3><b>Example 1</b></h3>
@@ -44,7 +44,7 @@ In your project Package.swift file add a dependency like<br/>
 Example 1 shows how to decode a byte array containing an ASN1 structure.
 
     import ASN1
-    import BigInt
+    import BigIntRenamed
 
     // ASN1 encoding of a private key for the brainpoolP160r1 elliptic curve domain
     let keyBytes: Bytes = [48, 84, 2, 1, 1, 4, 20, 41, 214, 158, 187, 255, 44, 248,
@@ -87,7 +87,7 @@ giving</br>
 Example 2 shows how to build an ASN1 structure programmatically and encode it to a byte array.
 
     import ASN1
-    import BigInt
+    import BigIntRenamed
 
     let privKey = BInt("238854808789429455904277046626010014418497476175")!
 
@@ -111,7 +111,7 @@ giving</br>
 
 ASN1 requires Swift 5.0.
 
-The ASN1 package depends on the BigInt package
+The ASN1 package depends on the BigIntRenamed package
 
     dependencies: [
         .package(url: "https://github.com/leif-ibsen/BigInt", from: "1.1.2"),
